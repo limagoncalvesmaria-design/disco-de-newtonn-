@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif; /*define a fonte*/
+    background: #f4f4f4; /*define a cor de fundo*/
+    text-align: center; /*define a posição do texto*/
+    margin: 0; /*define a margem*/
+    padding: 20px; /*define o tamanho da letra*/
+} /*fecha uma parte do código*/
+
+h1 { /*inicia outra parte do código*/
+    color: #222; /*define a cor*/
+} /*fecha uma parte do cóidigo*/
+
+section {
+    background: white; /*define cor de fundo*/
+    margin: 30px auto; /*define a margem*/
+    padding: 20px;/*define o tamanho da letra*/
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+}
+
+.disco {
+    width: 220px;
+    height: 220px; /*define a altura*/
+    margin: 20px auto; /*define a margem*/
+    border-radius: 50%;
+
+    background: conic-gradient( /*define elementos do fundo*/
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet,
+        red
+    );
+
+    animation: girar 2s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#led,
+#rgb {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+#led {
+    background: red;
+    animation: brilho 3s infinite;
+}
+
+@keyframes brilho {
+
+    0% {
+        opacity: .2;
+        box-shadow: 0 0 5px red;
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 60px red;
+    }
+
+    100% {
+        opacity: .2;
+        box-shadow: 0 0 5px red;
+    }
+
+}
+
+#rgb {
+    background: red;
+    box-shadow: 0 0 40px red;
+    transition: 1s;
+}
+
+p{
+    line-height:1.6;
+}
